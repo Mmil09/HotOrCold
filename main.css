@@ -1,0 +1,143 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/***********************End of CSS reset **************************/
+body {
+	background: linear-gradient(to right, #6a942f, #a1e048, #6a942f);
+}
+
+
+.panel {
+	background: linear-gradient(to right, #7896AB, #A3A9AD, #A7BCC9, #A3A9AD, #7896AB);	
+	box-shadow: 0px 10px 30px;
+	position: absolute;
+	width: 100%;
+}
+
+#panel-top {
+	height:200px;
+	top:0;
+	z-index: 1;
+}
+
+.default-style {
+	font-family: "Verdana", sans-serif;
+	font-variant: small-caps; 
+	font-weight: bold;
+	text-align: center;
+	background: radial-gradient(#a1e048, #6a942f);
+}
+
+#shadow-effect {
+
+	position: relative;
+	width: 400px;
+	height: 100px;
+	margin:  20px auto 0px auto;
+	display: block;	
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 5%;
+	border: 10px outset #D5DBD5; 
+	box-shadow: 0px 0px 30px black;
+	background-color:rgba(0, 0, 0, 0.0);
+	z-index: 2;
+
+}
+
+#header {
+	position: relative;
+	width: 400px;
+	height: 100px;
+	margin:  20px auto 0px auto;
+	display: block;	
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 40px;
+	box-shadow: 10px 10px 30px black inset;
+	border-radius: 5%;
+	border: 10px outset #D5DBD5; 
+	text-shadow:2px 2px 5px black;
+	z-index: 3;
+	
+}
+
+#header-text {
+	position: relative;
+	top:30%;
+	z-index: 4;
+}
+
+#hot {
+	color:#FF2F00;
+}
+
+#cold {
+	color: #1D91F0;
+}
+
+.measurement {
+	 height:400px;
+	 width: 100px;
+	 position: absolute;
+	 display: inline-block;
+	 margin: 50px;
+	 border-radius: 5%;
+}
+
+#gradient {
+	 background: linear-gradient(to bottom, #FF2F00, #F6FF00, #1D91F0);
+	 z-index: 1;
+}
+
+#cover {
+	background-color: #D2D6D9;
+	left: 20px;
+	z-index: 2
+}

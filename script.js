@@ -1,3 +1,7 @@
+/* 
+
+This is the basic javascript version 
+
 var anwswer = Math.floor((Math.random()*100)+1);
 
 
@@ -8,3 +12,6 @@ while (userInput != anwswer) {
 }
 
 var congrats = alert("Nice work!");
+
+*/
+
