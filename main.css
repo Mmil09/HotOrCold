@@ -50,6 +50,7 @@ table {
 /***********************End of CSS reset **************************/
 body {
 	background: linear-gradient(to right, #6a942f, #a1e048, #6a942f);
+	/* background: #383838; */
 }
 
 
@@ -70,7 +71,6 @@ body {
 	font-variant: small-caps; 
 	font-weight: bold;
 	text-align: center;
-	background: radial-gradient(#a1e048, #6a942f);
 
 }
 
@@ -83,17 +83,15 @@ body {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	font-size: 40px;
-	box-shadow: 10px 10px 30px black inset, 0px 0px 20px black;
-	border: 10px outset #D5DBD5; 
+	/* box-shadow: 10px 10px 30px black inset, 0px 0px 20px black; */
+	/* border: 10px outset #D5DBD5; */
 	text-shadow:2px 2px 5px black;
-	z-index: 3;
-	
-}
-
-#header-text {
 	position: relative;
 	top:30%;
-	z-index: 4;
+	}
+
+#header-text {
+	
 }
 
 #hot {
@@ -108,21 +106,49 @@ body {
 	border: 10px outset #D5DBD5; 
 	box-shadow: 10px 10px 30px black inset, 0px 0px 20px black;
 	background: radial-gradient(#A7BCC9, #A3A9AD, #7896AB);	
+	vertical-align: middle;
 }
 
 #input-panel {
-	margin: 100px auto 50px auto;
+	position: relative;
+	margin: 0px auto 20px auto;
 	width:300px;
 	height: 200px;
-	
+	font-size: 80px;
+	font-weight: bold;
 }
 
+#answers {
+	background: rgba(0, 0, 0, 0.0);
+	position: absolute;
+	width: 120px;
+	height: 20px;
+	color: black;
+	line-height: 10px;
+	font-size: 14px;
+	font-family: Arial;
+	top: 20px;
+	left: 20px;
+}
+	
+
 #guesses {
+	position: relative;
 	margin: 50px auto 50px auto;
-	width: 700px;
-	height: 80px;
+	width: 900px;
+	height: 50px;
 	background: rgba(0, 0, 0, 0.0);
 	box-shadow: 0px 0px 20px black;
+	background: linear-gradient(to right, #FF2F00, #39FA5D, #1D91F0);
+	border: none;
+}
+
+#feedback-panel {
+	width: 500px;
+	height: 75px;
+	margin: 20px auto 20px auto;
+	font-size: 20px;
+	font-style: italic;
 }
 
 input {
@@ -131,20 +157,7 @@ input {
 	height: inherit;
 	border: none;
 	text-align: center;
-	font: italic bold 60px "Times new roman" ;
-}
-
-.measurement {
-	 height:400px;
-	 width: 100px;
-	 position: absolute;
-	 display: block;
-	 margin: 50px;
-}
-
-#gradient {
-	 background: linear-gradient(to bottom, #FF2F00, #F6FF00, #1D91F0);
-	 z-index: 1;
+	font: inherit;
 }
 
 #cover {
@@ -153,9 +166,46 @@ input {
 	z-index: 2
 }
 
-button {
+#button-div {
+	width: 210px;
 	display: block;
+	margin: auto;
+}
+
+button {
+	display: inline-block;
 	width: 100px;
 	height: 40px;
-	margin: auto;
+	margin: 3px auto 3px auto;
+	border-radius: 10%;
+}
+
+button:hover {
+	box-shadow: 0px 0px 20px black;
+}
+
+.guess {
+	position: absolute;
+	display: inline-block;
+
+	border-radius: 100%;
+	width:30px;
+	height: 30px;
+	font: 15px arial;
+	line-height: 30px;
+	background: rgba(0, 0, 0, 0.25);
+	text-align: center;
+	top: 10px;
+}
+
+.wrong {
+	border: none;
+	color: black;
+}
+
+.correct {
+	background: black;
+	border: 1px solid white;
+	font-weight: bold;
+	color: white;
 }

@@ -7,7 +7,17 @@ $(document).ready(function() {
 	var feedback;
 	var answers = 0;
 	
-	
+	var clearFeed = function() {
+		$('#feedback').empty();
+	}
+
+	var fadeOut = function() {
+		$('#feedback').fadeOut();
+	}
+
+	var fadeIn = function() {
+		$('#feedback').fadeIn();
+	}
 
 	var checkAnswer = function() {
 
@@ -15,23 +25,27 @@ $(document).ready(function() {
 	var userInput = parseInt(userIpt, 10);
 
 	if(isNaN(userInput)) {
-		alert("Nice try, but your answer must be an number");
+		fadeOut();
+		clearFeed();
+		$('#feedback').val("Nice try, but your answer must be an number");	
+		fadeIn();
+		userInput = 'x';	
 	}
 
 	else if (userInput < 1 || userInput > 100) {
-		alert("must be between 1 and 100")
+		$('#feedback').val("Nice try, but your answer must be between 1 and 100")
 	}
 
 	else if (userInput > answer) {
-		alert("too hot");
+		$('#feedback').val("too hot");
 	}
 
 	else if (userInput < answer) {
-		alert("too cold " + answer);
+		$('#feedback').val("too cold " + answer);
 	}
 
 	else if (userInput == answer) {
-		alert("right on");
+		$('#feedback').val("right on");
 	}
 
 	answers++;
@@ -45,8 +59,8 @@ $(document).ready(function() {
 	$('#userInput').focus(); /*direct the focus to the number input area */
 
 	
-	$('#feedback').replaceWith("Guess a number between 1 and 100...");
-	$('#feedback').slideDown(5000);
+	$('#feedback').val("Guess a number between 1 and 100...")
+	/* $('#feedback').slideDown(5000); */
 
 
 	 $('#submit').click(checkAnswer);

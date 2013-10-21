@@ -5,30 +5,38 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script type='text/javascript' src='script.js'></script>
+	<script type='text/javascript' src='script2.js'></script>
 	<title>Hot or Cold by Michael Miller</title> 
 </head>
 
 <body>
-<div id="gradient" class="measurement body-panel"></div>
+<!-- <div id="gradient" class="measurement body-panel"></div> -->
 
 
 <div>
 	<div>
-		<div id="header-text">
+		<div id="header" class="default-style">
 			<span id="hot">Hot</span> or <span id="cold">Cold</span>?
 		</div>
 	</div>
 </div>
 
 <div class="body-panel" id="input-panel">
+	<div id="answers"></div>
 	<input type="text" id="userInput"></input>
 </div>
-<div class="body-panel" id="feedback"></div>
-<button id="submit" class="button">Submit</button>
-<button id="reset" class="button">Reset</button>
-<div class="body-panel" id="guesses">
 
+<div id="button-div">
+	<button id="submit" class="button">Submit</button>
+	<button id="reset" class="button">Reset</button>
+</div>
+<div class="body-panel" id="feedback-panel">
+	<input type="text" id="feedback"></input>
+</div>
+
+<div class="body-panel" id="guesses">
+<!-- <div class="guess wrong" style="left:50%">x</div>
+<div class="guess wrong" style="left:48%">y</div> -->
 </div>
 
 
